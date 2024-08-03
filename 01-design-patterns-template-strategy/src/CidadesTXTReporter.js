@@ -10,12 +10,14 @@ export default class CidadesTXTReporter {
     this.cidades = JSON.parse(this.cidades);
   }
 
+  
   reportar() {
     let result = `Relatório de Nomes de Cidades
-=============================`;
+=============================
+`;
 
     for (let i = 0; i < this.cidades.length; i++) {
-      result += '* ' + this.cidades[i]['Nome'] + '\n';
+      result += `* ${this.cidades[i]['Nome']}\n`;
     }
 
     return result;
